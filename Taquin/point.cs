@@ -21,10 +21,10 @@ namespace Taquin
             set { distance = value; }
         }
     }
-    class point
+    class Point
     {
         string nom_Point;
-        List<lien> voisin;
+        List<lien> list_voisins;
 
         public string Nom_Voisin
         {
@@ -33,13 +33,14 @@ namespace Taquin
         }
         public List<lien> Voisin
         {
-            get { return voisin; }
+            get { return list_voisins; }
         }
         public void Point(string nom, List<lien> voisins)
         {
             nom_Point = nom;
-            voisin = voisins;
+            list_voisins = voisins;
         }
+
     }
 
 
