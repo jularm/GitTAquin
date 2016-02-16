@@ -54,8 +54,7 @@
     </Compile>
     <Compile Include="GenericNode.cs" />
     <Compile Include="Graph.cs" />
-    <Compile Include="Monde.cs" />
-    <Compile Include="NodeLait.cs" />
+    <Compile Include="NodeL.cs" />
     <Compile Include="NodeTaquin.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
