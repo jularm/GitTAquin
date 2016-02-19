@@ -22,15 +22,20 @@ namespace projettaquin
     }
     class Point
     {
-        private string _nomPoint;
         private List<lien> _list_Voisins;
+        private string _nomPoint;
+        public string NomPoint
+        {
+            get { return _nomPoint; }
+            set { _nomPoint = value; }
+        }
 
         public string NomVoisin
         {
             get { return _nomPoint; }
             set { _nomPoint = value; }
         }
-        public List<lien> Voisin
+        public List<lien> List_Voisins
         {
             get { return _list_Voisins; }
             set { _list_Voisins = value; }
