@@ -23,11 +23,14 @@ namespace projettaquin
         {
             List<NodeL> list_succ = new List<NodeL>();
 
-            foreach ( NodeL N in this.list_Lien )
+            foreach (NodeL N in this.list_Lien)
             {
                 if (N.GetNoeud_Parent() == null)
                 {
                     N.SetNoeud_Parent(this);
+                }
+            }
+        }
 
         /*renvoit la distance entre le point correspondant au noeud this et le point correspondant au noeud node*/
         public override double GetArcCost(GenericNode node)
