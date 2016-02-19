@@ -7,20 +7,20 @@ namespace Taquin
 {
     class Monde
     {
-        private string nom_Monde;
-        List<Point> list_Points;
-        public string Nom_Monde
+        private string _nomMonde;
+        private static List<Point> list_Points;
+        public string NomMonde
         {
-            get { return nom_Monde; }
-            set { nom_Monde = value; }
+            get { return _nomMonde; }
+            set { _nomMonde = value; }
         }
-        public List<Point> List_Points
+        public static List<Point> List_Points
         {
             get { return list_Points; }
         }
-        public void Point(string nom, List<Point> points)
+        public void Monde(string nom, List<Point> points)
         {
-            nom_Monde = nom;
+            _nomMonde = nom;
             list_Points = points;
         }
     }
