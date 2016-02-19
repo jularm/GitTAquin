@@ -24,5 +24,21 @@ namespace projettaquin
             _nomMonde = nom;
             list_Points = points;
         }
+
+
+        public List<Point> Impasses()
+        {
+            List<Point> res = new List<Point>();
+            foreach (Point P in list_Points)
+            {
+                if (P.List_Voisins.Count == 1)
+                {
+                    res.Add(P);
+                }
+            }
+            return res;
+        }
+
+
     }
 }
