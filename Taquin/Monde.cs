@@ -8,14 +8,14 @@ namespace projettaquin
     class Monde
     {
         private string _nomMonde;
-        List<Point> list_Points;
+        private static List<Point> list_Points;
 
         public string NomMonde
         {
             get { return _nomMonde; }
             set { _nomMonde = value; }
         }
-        public List<Point> List_Points
+        public static List<Point> List_Points
         {
             get { return list_Points; }
         }
