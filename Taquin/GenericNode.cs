@@ -90,6 +90,7 @@ namespace projettaquin
 
         // Méthodes abstrates, donc à surcharger obligatoirement avec override dans une classe fille
         public abstract double GetArcCost(GenericNode N2);
+        //renvoie la distance entre le noeud et son voisin DIRECT N2
         public abstract bool EndState();
         public abstract List<GenericNode> GetListSucc();
         public abstract void CalculeHCost();
