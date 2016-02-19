@@ -29,6 +29,11 @@ namespace projettaquin
                 {
                     N.SetNoeud_Parent(this);
                 }
+
+                foreach (NodeL N in this.Enfants)
+                {
+                    list_succ.Add(N);
+                }
             }
         }
 
