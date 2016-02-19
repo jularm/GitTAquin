@@ -1,4 +1,10 @@
-﻿namespace projettaquin
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace projettaquin
 {
     partial class Form1
     {
