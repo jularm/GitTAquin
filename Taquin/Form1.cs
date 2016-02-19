@@ -17,7 +17,6 @@ namespace projettaquin
             InitializeComponent();
         }
 
-        public Monde fermes;
         private void button1_Click(object sender, EventArgs e)
         {
             Graph g = new Graph();

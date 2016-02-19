@@ -5,15 +5,24 @@ using System.Text;
 
 namespace projettaquin
 {
-    class NodeLait : GenericNode
+    class NodeL : GenericNode
     {
+        /*renvoit la distance entre le point correspondant au noeud this et le point correspondant au noeud node*/
         public override double GetArcCost(GenericNode node)
         {
-            NodeLait resultat;
-            resultat=listeVoisin.find(voisin => voisin.nom == node.GetNom());
-            if (resultat!=null)
+            Point pointNode = Monde.list_Points.find(point => point.nom == node.GetNom());
+            if (pointNode != null)
             {
-                return resultat.distance;
+                NodeL resultat = pointNode.list_Voisins.find(voisin => voisin.nom == node.GetNom()); ;
+                if (resultat!=null)
+                {
+                    return resultat.distance;
+                }
+                else
+                {
+                    string erreur = "ce point n'a pas de voisin correspondant au nom " + node.GetNom();
+                    throw new Exception(erreur);
+                }
             }
             else
             {
@@ -21,6 +30,5 @@ namespace projettaquin
                 throw new Exception(erreur);
             }
         }
-
     }
 }

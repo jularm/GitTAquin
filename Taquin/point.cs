@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Taquin
+namespace projettaquin
 {
     struct lien
     {
         private string _nomVoisin;
-        private int _distance;
+        private int _distance;   
         public string NomVoisin
         {
             get { return _nomVoisin;}
@@ -19,12 +19,19 @@ namespace Taquin
             get { return _distance; }
             set { _distance = value; }
         }
+        public lien(string nom, int dist)
+        {
+            _nomVoisin = nom;
+            _distance = dist;
+        }
     }
     class Point
     {
+        string nom_Point;
+        List<lien> list_voisins;
+        bool ferme;
         private string _nomPoint;
         private List<lien> _list_Voisins;
-
         public string NomVoisin
         {
             get { return _nomPoint; }
@@ -35,10 +42,17 @@ namespace Taquin
             get { return _list_Voisins; }
             set { _list_Voisins = value; }
         }
-        public void Point(string nom, List<lien> voisins)
+        public Point(string nom, List<lien> voisins)
         {
-            _nomPoint = nom;
-            _list_Voisins = voisins;
+            nom_Point = nom;
+            list_voisins = voisins;
+            ferme = false;
+        }
+        public Point(string nom, List<lien> voisins, bool farm)
+        {
+            nom_Point = nom;
+            list_voisins = voisins;
+            ferme = farm;
         }
     }
 }
