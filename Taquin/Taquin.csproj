@@ -54,7 +54,11 @@
     </Compile>
     <Compile Include="GenericNode.cs" />
     <Compile Include="Graph.cs" />
+<<<<<<< HEAD
     <Compile Include="Monde.cs" />
+=======
+    <Compile Include="NodeL.cs" />
+>>>>>>> refs/remotes/origin/master
     <Compile Include="NodeTaquin.cs" />
     <Compile Include="Point.cs" />
     <Compile Include="Program.cs" />
