@@ -20,33 +20,33 @@ namespace projettaquin
 
         public override bool EndState()
         {
-            
+            return (this.GetNom() == "12345678?");
         }
 
         public override List<NodeL> GetListSucc()
         {
-           List<NodeL> list_succ = new List<NodeL>();
+            List<NodeL> list_succ = new List<NodeL>();
 
+            foreach ( NodeL N in this.list_Lien )
+            {
+                if (N.GetNoeud_Parent() == null)
+                {
+                    N.SetNoeud_Parent(this);
+                }
+            }
 
+            foreach (NodeL N in this.Enfants)
+            {
+                list_succ.Add(N);
+            }
 
-
-           return list_succ;
+            return list_succ;
         }
 
         public override void CalculeHCost()
         {
             SetEstimation(0);
         }
-
-        private string GetStringFromTab(char[,] tab)
-        {
-            string newname = "";
-            for (int j = 0; j <= 2; j++)
-                for (int i = 0; i <= 2; i++)
-                {
-                    newname = newname + tab[i, j];
-                }
-            return newname;
-        }
+                
     }
 }
