@@ -8,7 +8,7 @@
     <ProjectGuid>{8931B653-946A-4FC5-B96A-DAC16DA2426B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Taquin</RootNamespace>
+    <RootNamespace>projettaquin</RootNamespace>
     <AssemblyName>Taquin</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
@@ -54,8 +54,13 @@
     </Compile>
     <Compile Include="GenericNode.cs" />
     <Compile Include="Graph.cs" />
+<<<<<<< HEAD
+    <Compile Include="Monde.cs" />
+=======
     <Compile Include="NodeL.cs" />
+>>>>>>> refs/remotes/origin/master
     <Compile Include="NodeTaquin.cs" />
+    <Compile Include="Point.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -69,6 +74,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
