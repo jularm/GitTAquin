@@ -2,42 +2,51 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-<<<<<<< HEAD
-namespace Taquin
+namespace projettaquin
 {
     class NodeL : GenericNode
     {
-
-         public NodeL( string newname ) : base(newname)
+        public NodeL(string newname)
+            : base(newname)
         {
         }
 
-
-        public abstract double GetArcCost(GenericNode N2);
-        public abstract bool EndState();
-        public abstract List<GenericNode> GetListSucc();
-        public abstract void CalculeHCost();
-=======
-namespace projettaquin
-{
-    class NodeLait : GenericNode
-    {
-        public override double GetArcCost(GenericNode node)
+        public override double GetArcCost(GenericNode N2)
         {
-            NodeLait resultat;
-            resultat=listeVoisin.find(voisin => voisin.nom == node.GetNom());
-            if (resultat!=null)
-            {
-                return resultat.distance;
-            }
-            else
-            {
-                string erreur = "ce point n'a pas de voisin correspondant au nom " + node.GetNom();
-                throw new Exception(erreur);
-            }
+            return (1);
         }
 
->>>>>>> refs/remotes/origin/master
+        public override bool EndState()
+        {
+            
+        }
+
+        public override List<NodeL> GetListSucc()
+        {
+           List<NodeL> list_succ = new List<NodeL>();
+
+
+
+
+           return list_succ;
+        }
+
+        public override void CalculeHCost()
+        {
+            SetEstimation(0);
+        }
+
+        private string GetStringFromTab(char[,] tab)
+        {
+            string newname = "";
+            for (int j = 0; j <= 2; j++)
+                for (int i = 0; i <= 2; i++)
+                {
+                    newname = newname + tab[i, j];
+                }
+            return newname;
+        }
     }
 }
